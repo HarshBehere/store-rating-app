@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "Idli&me732",
+    "database": "store_rating_db",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "postgres",
+    "password": "your_db_password",
+    "database": "store_rating_test_db",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "postgres",
+    "password": "your_db_password",
+    "database": "store_rating_prod_db",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
