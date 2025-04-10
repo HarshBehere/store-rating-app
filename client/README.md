@@ -1,70 +1,103 @@
-# Getting Started with Create React App
+Store Rating App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a full-stack web application where users can register, log in, and rate different stores. The app includes role-based access control so that only Store Owners and System Administrators can create stores.
 
-## Available Scripts
+Tech Stack Used
 
-In the project directory, you can run:
+Frontend: React, Axios, React Router  
+Backend: Node.js, Express  
+Database: PostgreSQL  
+ORM: Sequelize  
+Authentication: Token-based (simulated with dummy tokens)  
+User Roles: Normal User, Store Owner, System Administrator
 
-### `npm start`
+Main Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Register as a new user with a specific role
+- Log in and receive a token (dummy-based or JWT)
+- Store Owners and Admins can create stores
+- All users can view the list of rated stores
+- Role-based access control to restrict certain actions
+- Fully RESTful API using Express and Sequelize
+- React frontend with route protection
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+How to Run This Project Locally
 
-### `npm test`
+1. Clone this repository to your system
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Start the Backend
 
-### `npm run build`
+   - Open terminal and navigate to the server folder:
+     cd server
+   - Install dependencies:
+     npm install
+   - Start the server:
+     npm run dev
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Start the Frontend
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   - Open a second terminal and navigate to the client folder:
+     cd client
+   - Install dependencies:
+     npm install
+   - Start the React app:
+     npm start
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Backend runs at http://localhost:5000  
+   Frontend runs at http://localhost:3000
 
-### `npm run eject`
+Project Structure
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The codebase is divided into two main parts:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+store-rating-app/
+├── client/
+│ ├── pages/
+│ │ ├── SignUp.jsx
+│ │ ├── SignIn.jsx
+│ │ ├── AddStore.jsx
+│ │ └── AllStores.jsx
+│ └── App.jsx
+│
+├── server/
+│ ├── controllers/
+│ ├── routes/
+│ ├── models/
+│ ├── middleware/
+│ └── index.js
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Screenshots
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Stores List  
+   Displays all stores available in the system. Accessible to all users.
 
-## Learn More
+![Stores List](Project%20Screenshots/Stores%20List.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. Register Form  
+   Simple registration form with name, email, password, and role selector.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![Register Form](Project%20Screenshots/Register%20Form.png)
 
-### Code Splitting
+3. Register Form Scrollbar  
+   Demonstrates smooth scrolling with styled dropdown for selecting roles.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![Register Form Scrollbar](Project%20Screenshots/Register%20Form%20Scrollbar.png)
 
-### Analyzing the Bundle Size
+4. Login Page  
+   Allows registered users to sign in with their email and password.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![Login Page](Project%20Screenshots/Login%20Page.png)
 
-### Making a Progressive Web App
+5. Store Creation  
+   Restricted access form for Store Owners and System Admins to add new stores.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+![Store Creation](Project%20Screenshots/Store%20Creation.png)
 
-### Advanced Configuration
+6. Backend and Server Connection  
+   Backend server running successfully with Sequelize and Express.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+![Backend And Server Connection](Project%20Screenshots/Backend%20And%20Server%20Connection.png)
 
-### Deployment
+About the Developer
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Developed by Harsh Behere — passionate about clean UI, scalable backend architecture, and building real-world full-stack applications with focus and fun.
